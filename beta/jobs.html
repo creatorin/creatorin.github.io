@@ -52,6 +52,12 @@
     color: #f57181;
    }
   </style>
+
+    <!--JQUERY ACTIVATION WHICH AVOIDS $ NOT DEFINED ERROR  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- PROFILE DATA PULLING JS -->
+    <script type="text/javascript" src="../assets/js/data_puller_live.js"></script>
+
 </head>
 <body>
   <!-- ========== HEADER ========== -->
@@ -123,13 +129,13 @@
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main">
+  <main id="content" role="main" style="min-height: 800px;">
     
     <div class="mt-4">
       <div class="container space-2">
-        <div class="row justify-content-lg-between align-items-lg-center">
+        <div id="recent_job_list" class="row justify-content-lg-between align-items-lg-center">
           
-          <div class="col-lg-12 mb-3">
+          <!-- <div class="col-lg-12 mb-3">
             <div class="row border px-0 py-3 align-items-center">
               <div class="col-md-7">
                 <p>Crowdcast</p>
@@ -226,7 +232,7 @@
                 <span class="badge badge-creative">Full Time</span>
             </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>

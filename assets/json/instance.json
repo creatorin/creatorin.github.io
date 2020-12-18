@@ -1,3 +1,4 @@
 {
-    "instance_url":"https://corp.mongrov.com"
+    "jobs_url":"https://jobs.app.creatorin.com/api/jobs",
+    "featured_jobs_url":"https://jobs.app.creatorin.com/api/jobs"
 }
