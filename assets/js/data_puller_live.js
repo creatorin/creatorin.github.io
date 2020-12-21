@@ -29,9 +29,9 @@ console.log(jobs_url);
 
           success:function (myJSON) {
             // var myJSON = JSON.parse(results);
-            console.log(myJSON);
+            // console.log(myJSON);
             if(myJSON.status === "success"){
-              
+            // var featuredThroughdata=false;
               // console.log( myJSON.data);
             
             var job_lists_content ='';
@@ -44,11 +44,14 @@ console.log(jobs_url);
               var isRemote = myJSON.data[i].remote;
               var createdAt= myJSON.data[i].createdAt.split('T')[0];
               var featuredThroughdata=false;
+
+              var url = "job-details.html" + decodeURIComponent("?job_id=" + job_id);
               
               if(myJSON.data[i].hasOwnProperty("featuredThrough"))
               {
                 var featuredThrough= myJSON.data[i].featuredThrough;
                 featuredThroughdata = true;
+                // $("#featurechecker").addClass("feature_active");
               }
 
               var job_content = `
@@ -57,7 +60,7 @@ console.log(jobs_url);
               <div class="col-md-7">
                 <p>${company_name}</p>
                 <h4>
-                  <a href="javascript:;" class="text-dark">${job_title}</a>
+                  <a href="${url}" class="text-dark">${job_title}</a>
                 </h4>
                 <p class="mb-0">${job_location}</p>
               </div>
@@ -65,7 +68,7 @@ console.log(jobs_url);
                 <i class="fa fa-calendar"></i> ${createdAt.split("-").reverse("").join("/")}
               </div>
               <div class="col-md-3 text-right">
-                <span class="badge badge-warning">${(featuredThroughdata=== true)?'Featured':''}</span>
+                <span class="badge badge-warning">${(featuredThroughdata === true)?'Featured':''}</span>
                 <span class="badge badge-success">${(isRemote=== true)?'Remote':''}</span>
                 <span class="badge badge-creative">${job_type}</span>
             </div>
@@ -73,9 +76,9 @@ console.log(jobs_url);
           </div>`;
               // APPENDING CURRENT LOOP DATA WITH PREVIOUS LOOP DATA
               job_lists_content += job_content;
+
               if(i==2){
                 $('#recent_job_list_home').html(job_lists_content);
-                // console.log("printed 3 lists");
               }
             }
 

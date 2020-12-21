@@ -51,12 +51,15 @@
    footer .btn-soft-light:hover, footer .btn-soft-light:focus, footer .btn-soft-light:active, footer .btn-soft-light.active {
     color: #f57181;
    }
+   .hide {
+     display: none;
+   }
   </style>
 
     <!--JQUERY ACTIVATION WHICH AVOIDS $ NOT DEFINED ERROR  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <!-- PROFILE DATA PULLING JS -->
-    <script type="text/javascript" src="../assets/js/data_puller_live.js"></script>
+    <script type="text/javascript" src="../assets/js/jobdetail.js"></script>
 
 </head>
 <body>
@@ -129,18 +132,18 @@
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main" style="min-height: 800px;">
+  <main id="content" role="main" style="min-height: 100vh;">
     
     <div class="mt-4">
       <div class="container space-2">
         <div class="row space-1">
             <div class="col-md-8">
-               <h1>Product Designer</h1>
-               <span class="badge badge-warning">Featured</span>
-                <span class="badge badge-success">Remote</span>
-                <span class="badge badge-creative">Full Time</span>
-                <div class="mt-4">
-                    <h2 class="">Who we are</h2>
+               <h1 id="job_title_html">...</h1>
+               <span id="job_featured_html" class="badge badge-warning"></span>
+                <span id="job_remote_html" class="badge badge-success"></span>
+                <span id="job_type_html" class="badge badge-creative"></span>
+                <div id="job_desc_html" class="mt-4">
+                    <!-- <h2 class="">Who we are</h2>
                     <p>Crowdcast is the online events platform for businesses, creators and people at large to bring their communities together. We've experienced massive growth over the course of 2020 as people all over the world move their events online.</p>
                     <p>Every month, millions of people attend events ranging from Q&As to workshops, live shows, meet-ups, webinars, online concerts, & online summits. Our customers range from big companies like Adobe, IBM, Twilio, & HP to individual creators like MIA, Amanda Palmer, System of a Down & Jacob Collier.</p>
                     <p>We believe technology can be used to bring people together & bridge divides. We're empowering people to share their ideas at scale, bring communities together, and make a living in the process.</p>
@@ -162,7 +165,7 @@
                         <li>Agility in utilizing a variety of discovery, research, and validation methods to drive meaningful outcomes. You strive to uncover the “Why” behind the numbers.</li>
                         <li>A strong foundation in HTML &amp; CSS and a deep understanding of native iOS and Android app interfaces. A huge plus if you have a coding background.</li>
                         <li>A humble and collaborative attitude where you're always looking to learn and improve.</li><li>Bonus: Experience in live streaming/online events or the creator economy.</li>
-                    </ul>
+                    </ul> -->
                 </div>
 
             </div>
@@ -170,12 +173,12 @@
                 <div class="card">
                     <div class="card-body">
                       <ul class="list-unstyled">
-                          <li class="border-bottom py-3"><i class="fas fa-building text-red mr-2"></i> Crowdcast</li>
-                          <li class="border-bottom py-3"><i class="fas fa-map-marker-alt text-red mr-2"></i> anywhere</li>
-                          <li class="border-bottom py-3"><i class="fas fa-envelope text-red mr-2"></i>admin@mongrov.com</li>
-                          <li class="border-bottom py-3"><i class="fas fa-calendar-alt text-red mr-2"></i>Posted on 12/17/20</li>
-                          <li class="border-bottom py-3"><i class="fas fa-trophy text-red mr-2"></i>Featured Until 1/31/21</li>
-                          <li class="pt-3"><i class="fas fa-external-link-alt text-red mr-2"></i><a target="_blank" href="https://weworkremotely.com/remote-jobs/crowdcast-product-designer" class="text-inherit">Visit Website</a> </li>
+                          <li  class="border-bottom py-3"><i class="fas fa-building text-red mr-2"></i> <span id="company_name_html"> </span></li>
+                          <li  class="border-bottom py-3"><i class="fas fa-map-marker-alt text-red mr-2"></i><span id="job_location_html"> </span> </li>
+                          <li  class="border-bottom py-3"><i class="fas fa-envelope text-red mr-2"></i><span id="job_mail_html"> </span></li>
+                          <li  class="border-bottom py-3"><i class="fas fa-calendar-alt text-red mr-2"></i>Posted on <span id="job_posteddate_html"></span></li>
+                          <li  id="job_featureddate_html_li" class="border-bottom py-3 hide"><i class="fas fa-trophy text-red mr-2"></i>Featured Until <span id="job_featureddate_html" ></span></li>
+                          <li  class="pt-3"><i class="fas fa-external-link-alt text-red mr-2"></i><a id="job_external_link_html" target="_blank" href="" class="text-inherit">Visit Website</a> </li>
                       </ul>
                     </div>
                   </div>
