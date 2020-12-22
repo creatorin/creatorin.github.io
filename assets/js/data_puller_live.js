@@ -44,6 +44,7 @@ console.log(jobs_url);
               var isRemote = myJSON.data[i].remote;
               var createdAt= myJSON.data[i].createdAt.split('T')[0];
               var featuredThroughdata=false;
+              var feature_background = '';
 
               var url = "job-details.html" + decodeURIComponent("?job_id=" + job_id);
               
@@ -52,11 +53,12 @@ console.log(jobs_url);
                 var featuredThrough= myJSON.data[i].featuredThrough;
                 featuredThroughdata = true;
                 // $("#featurechecker").addClass("feature_active");
+                feature_background = 'feature_active';
               }
 
               var job_content = `
               <div class="col-lg-12 mb-3">
-              <div class="row border px-0 py-3 align-items-center">
+              <div class="row border px-0 py-3 align-items-center ${feature_background}">
               <div class="col-md-7">
                 <p>${company_name}</p>
                 <h4>
