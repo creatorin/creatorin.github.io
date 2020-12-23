@@ -30,6 +30,22 @@ console.log(jobs_url);
           success:function (myJSON) {
             // var myJSON = JSON.parse(results);
             // console.log(myJSON);
+
+            var months = {
+              0: 'Jan',
+              1: 'Feb',
+              2: 'Mar',
+              3: 'Apr',
+              4: 'May',
+              5: 'Jun',
+              6: 'Jul',
+              7: 'Aug',
+              8: 'Sep',
+              9: 'Oct',
+              10: 'Nov',
+              11: 'Dec'
+            };
+
             if(myJSON.status === "success"){
             // var featuredThroughdata=false;
               // console.log( myJSON.data);
@@ -46,30 +62,32 @@ console.log(jobs_url);
               var featuredThroughdata=false;
               var feature_background = '';
 
+              var dateformat = new Date(myJSON.data[i].createdAt);
+              
+
               var url = "job-details.html" + decodeURIComponent("?job_id=" + job_id);
               
               if(myJSON.data[i].hasOwnProperty("featuredThrough"))
               {
-                var featuredThrough= myJSON.data[i].featuredThrough;
+                var featuredThrough = myJSON.data[i].featuredThrough;
                 featuredThroughdata = true;
-                // $("#featurechecker").addClass("feature_active");
                 feature_background = 'feature_active';
               }
 
               var job_content = `
-              <div class="col-lg-12 mb-3">
-              <div class="row border px-0 py-3 align-items-center ${feature_background}">
-              <div class="col-md-7">
+              <div class="col-lg-12 mx-2 mx-md-0  mb-3 bg-white">
+              <div id="rmv" class="row border px-0 py-3 align-items-md-center shadow ${feature_background}">
+              <div class="col-8 col-md-7">
                 <p>${company_name}</p>
                 <h4>
                   <a href="${url}" class="text-dark">${job_title}</a>
                 </h4>
                 <p class="mb-0">${job_location}</p>
               </div>
-              <div class="col-md-2 text-right">
-                <i class="fa fa-calendar"></i> ${createdAt.split("-").reverse("").join("/")}
+              <div class="col-4 col-md-2 text-right">
+                <i class="fa fa-calendar"></i> ${months[dateformat.getUTCMonth()] + " "+ dateformat.getUTCDate()}
               </div>
-              <div class="col-md-3 text-right">
+              <div class="col-md-3 text-left text-md-right mt-2 mt-md-0">
                 <span class="badge badge-warning">${(featuredThroughdata === true)?'Featured':''}</span>
                 <span class="badge badge-success">${(isRemote=== true)?'Remote':''}</span>
                 <span class="badge badge-creative">${job_type}</span>

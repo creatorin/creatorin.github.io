@@ -1,10 +1,32 @@
+@font-face {
+    font-family: 'cerebri_sanslight';
+    src: url('../fonts/cerebrisans-light-webfont.woff2') format('woff2'),
+         url('../fonts/cerebrisans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'cerebri_sansmedium';
+    src: url('../fonts/cerebrisans-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cerebrisans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html,
 body {
     width: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-family: 'cerebri_sanslight' !important;
 }
+
+
 
 .design-dots {
     visibility: visible;
@@ -16,18 +38,18 @@ body {
     }
 
     .mb-small-2 {
-      margin-bottom:2px;  
+        margin-bottom: 2px;
     }
 
-    .nav-segment:not(.nav-fill){
+    .nav-segment:not(.nav-fill) {
         display: block;
     }
-    
-    .nav-segment.nav-pills{
+
+    .nav-segment.nav-pills {
         border-radius: 0 !important;
     }
 
-    .sm-p-1{
+    .sm-p-1 {
         padding: 1rem;
     }
 
@@ -45,8 +67,9 @@ body {
     .design-dots {
         visibility: hidden;
     }
+
     .md-mt-2 {
-        margin-top:2rem
+        margin-top: 2rem
     }
 }
 

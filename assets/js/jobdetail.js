@@ -15,6 +15,20 @@ var jobs_url = datas.jobs_url;
 
 // console.log(jobs_url);
 
+var months = {
+  0: 'Jan',
+  1: 'Feb',
+  2: 'Mar',
+  3: 'Apr',
+  4: 'May',
+  5: 'Jun',
+  6: 'Jul',
+  7: 'Aug',
+  8: 'Sep',
+  9: 'Oct',
+  10: 'Nov',
+  11: 'Dec'
+};
 
   $.ajax({
           "async": true,
@@ -29,7 +43,7 @@ var jobs_url = datas.jobs_url;
 
           success:function (myJSON) {
             // var results = JSON.parse(myJSON);
-            console.log(myJSON);
+            // console.log(myJSON);
             if(myJSON.status === "success"){
               // CODE SHOULD BE REMOVED AFTER GETTING PARAMS URL
               var myJSONs= myJSON.data;
@@ -37,17 +51,17 @@ var jobs_url = datas.jobs_url;
 
               var jobPageURL = window.location.search.substring(1);
               var job_idVariable = jobPageURL.split('=')[1];
-              console.log(job_idVariable);
+              // console.log(job_idVariable);
               var index = myJSONs.findIndex(function(item, i){
                 if(item._id === job_idVariable){
-                  console.log("data index", i);
+                  // console.log("data index", i);
                 }
                 return item._id === job_idVariable;
                 
               });
-              console.log(index);
+              
               var dataobject=myJSONs[index];
-              console.log(dataobject);
+             
 
 
             
@@ -62,7 +76,9 @@ var jobs_url = datas.jobs_url;
               var createdAt= dataobject.createdAt.split('T')[0];
               var job_mail = dataobject.contact;
               // var job_post_date = dataobject.createdAt;
-              var job_site_url = dataobject.siteUrl;
+              
+
+              var posteddateformat = new Date(dataobject.createdAt);
 
 
               var job_description = dataobject.htmlDescription;
@@ -70,8 +86,8 @@ var jobs_url = datas.jobs_url;
               
               if(dataobject.hasOwnProperty("featuredThrough"))
               {
-                var featuredThrough= dataobject.featuredThrough.split('T')[0];
-                $("#job_featureddate_html").html(featuredThrough.split("-").reverse("").join("/"));
+                var featuredThrough= new Date(dataobject.featuredThrough);
+                $("#job_featureddate_html").html("<b>"+ months[featuredThrough.getUTCMonth()] + " "+ featuredThrough.getUTCDate() + ", " + featuredThrough.getUTCFullYear() + "</b>");
                 $("#job_featureddate_html_li").removeClass("hide");
                 featuredThroughdata = true;
               }
@@ -89,9 +105,16 @@ var jobs_url = datas.jobs_url;
               $("#company_name_html").html(company_name);
               $("#job_location_html").html(job_location);
               $("#job_mail_html").html(job_mail);
-              $("#job_posteddate_html").html(createdAt.split("-").reverse("").join("/"));
+              $("#job_posteddate_html").html("<b>"+ months[posteddateformat.getUTCMonth()] + " "+ posteddateformat.getUTCDate() + ", " + posteddateformat.getUTCFullYear() + "</b>");
               
-              $("#job_external_link_html").attr("href", job_site_url);
+              if(dataobject.hasOwnProperty("url"))
+              {
+                var job_site_url = dataobject.url;
+                $("#job_external_link_html").attr("href", job_site_url);
+                $("#job_external_link_html_li").removeClass("hide");
+                featuredThroughdata = true;
+              }
+              
 
           }
         },
