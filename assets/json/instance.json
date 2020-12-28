@@ -1,4 +1,5 @@
 {
     "jobs_url":"https://jobs.app.creatorin.com/api/jobs",
+    "jobs_detail_url": "https://jobs.app.creatorin.com/api/getjob",
     "featured_jobs_url":"https://jobs.app.creatorin.com/api/jobs"
 }
