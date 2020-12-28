@@ -56,7 +56,7 @@ console.log(jobs_url);
               var company_name = myJSON.data[i].company;
               var job_title = myJSON.data[i].title;
               var job_type = myJSON.data[i].jobtype;
-              // var job_location = myJSON.data[i].location;
+              var job_location = myJSON.data[i].location;
               var isRemote = myJSON.data[i].remote;
               var createdAt= myJSON.data[i].createdAt.split('T')[0];
               var featuredThroughdata=false;
@@ -82,7 +82,7 @@ console.log(jobs_url);
                 <h4>
                   <a href="${url}" class="text-dark">${job_title}</a>
                 </h4>
-               
+                <p class="mb-0">${job_location}</p>
               </div>
               <div class="col-4 col-md-2 text-right">
                 <i class="fa fa-calendar"></i> ${months[dateformat.getUTCMonth()] + " "+ dateformat.getUTCDate()}
