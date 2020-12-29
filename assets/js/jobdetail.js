@@ -4,7 +4,13 @@
 
 // // GET URL FROM LOCAL JSON FILE
 var instancedata = $.getJSON("../../assets/json/instance.json", function (datas) {
-var jobs_url = datas.jobs_url;
+
+  var jobPageURL = window.location.search.substring(1);
+  var job_idVariable = jobPageURL.split('=')[1];
+
+var jobs_detail_url = datas.jobs_detail_url + "/" + job_idVariable;
+
+console.log(jobs_detail_url);
  
 // Get url from current url params
 // var url = window.location.pathname;
@@ -14,6 +20,8 @@ var jobs_url = datas.jobs_url;
 // var urlprofilename = urlprofile.split('.')[0];
 
 // console.log(jobs_url);
+
+
 
 var months = {
   0: 'Jan',
@@ -33,7 +41,7 @@ var months = {
   $.ajax({
           "async": true,
           "crossDomain": true,
-          "url": jobs_url,
+          "url": jobs_detail_url,
           "cors": true ,
           "method": "GET",
           "headers": {
@@ -49,18 +57,18 @@ var months = {
               var myJSONs= myJSON.data;
               
 
-              var jobPageURL = window.location.search.substring(1);
-              var job_idVariable = jobPageURL.split('=')[1];
+              // var jobPageURL = window.location.search.substring(1);
+              // var job_idVariable = jobPageURL.split('=')[1];
               // console.log(job_idVariable);
-              var index = myJSONs.findIndex(function(item, i){
-                if(item._id === job_idVariable){
-                  // console.log("data index", i);
-                }
-                return item._id === job_idVariable;
+              // var index = myJSONs.findIndex(function(item, i){
+              //   if(item._id === job_idVariable){
+              //     // console.log("data index", i);
+              //   }
+              //   return item._id === job_idVariable;
                 
-              });
+              // });
               
-              var dataobject=myJSONs[index];
+              var dataobject=myJSONs;
              
 
 
