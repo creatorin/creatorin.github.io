@@ -82,3 +82,10 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    border-top: 0.1875rem solid #f57181 !important;
+}
+.dropdown-item:hover {
+    color: #ed4c78 !important;
+}
