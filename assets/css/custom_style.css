@@ -89,3 +89,6 @@ body {
 .dropdown-item:hover {
     color: #ed4c78 !important;
 }
+.header .nav-link, .dropdown-item {
+    color: #000000;
+}
