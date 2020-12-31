@@ -1,5 +1,7 @@
 {
     "jobs_url":"https://jobs.app.creatorin.com/api/jobs",
     "jobs_detail_url": "https://jobs.app.creatorin.com/api/getjob",
-    "featured_jobs_url":"https://jobs.app.creatorin.com/api/jobs"
+    "featured_jobs_url":"https://jobs.app.creatorin.com/api/jobs",
+    "webdesign_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Web%20Design",
+    "others_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Others"
 }
