@@ -84,7 +84,7 @@ console.log(jobs_url);
                 </h4>
                
               </div>
-              <div class="col-4 col-md-2 text-right">
+              <div class="col-4 col-md-2 text-right text-md-left pl-0 pl-md-6">
                 <i class="fa fa-calendar"></i> ${months[dateformat.getUTCMonth()] + " "+ dateformat.getUTCDate()}
               </div>
               <div class="col-md-3 text-left text-md-right mt-2 mt-md-0">
