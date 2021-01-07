@@ -166,3 +166,8 @@ footer .btn-soft-light.active {
   border-color: rgb(255 187 195);
   box-shadow: 0 0 10px rgb(255 239 241);
 }
+
+.btn-creative-green {
+  background: #6AD8A8 !important;
+  color: #FFFFFF !important;
+}
