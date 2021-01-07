@@ -61,6 +61,7 @@ console.log(jobs_url);
               var createdAt= myJSON.data[i].createdAt.split('T')[0];
               var featuredThroughdata=false;
               var feature_background = '';
+              var job_category = myJSON.data[i].category;
 
               var dateformat = new Date(myJSON.data[i].createdAt);
               
@@ -78,11 +79,12 @@ console.log(jobs_url);
               <div class="col-lg-12 mx-2 mx-md-0  mb-3 bg-white">
               <div id="rmv" class="row border px-0 py-3 align-items-md-center shadow ${feature_background}">
               <div class="col-8 col-md-7">
-                <p>${company_name}</p>
+                <p> ${company_name}</p>
+                
                 <h4>
                   <a href="${url}" class="text-dark">${job_title}</a>
                 </h4>
-               
+                <span class="badge border rounded mr-2">${job_category}</span>
               </div>
               <div class="col-4 col-md-2 text-right text-md-left pl-0 pl-md-6">
                 <i class="fa fa-calendar"></i> ${months[dateformat.getUTCMonth()] + " "+ dateformat.getUTCDate()}
