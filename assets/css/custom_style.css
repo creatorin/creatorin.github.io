@@ -171,3 +171,8 @@ footer .btn-soft-light.active {
   background: #6AD8A8 !important;
   color: #FFFFFF !important;
 }
+
+.bg-img-hero-on-body {
+  background-image: url(../../assets/svg/illustrations/error-404.svg);
+  background-position: 0 -20px;
+}
