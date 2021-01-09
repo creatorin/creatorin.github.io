@@ -193,6 +193,13 @@
       height: 556px;
       margin-top: 60px;
     }
+    @media only screen and (max-width: 767px;){
+      .creative-pills li.nav-item {
+      margin-right: 30px !important;
+      text-align: center;
+      margin-left: 30px;
+      }
+    }
   </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -336,10 +343,10 @@
         <div class="container space-top-3 space-bottom-4">
           <div class="row align-items-center">
             <div class="col-md-9">
-              <h2 class="mb-0"><span> Hello, I'm </span> <span id="profile_name"></span></h2>
-              <h1 id="profile_label" class="display-3"></h1>
+              <h2 class="mb-0 text-center text-md-left"><span> Hello, I'm </span> <span id="profile_name"></span></h2>
+              <h1 id="profile_label" class="display-3 text-center text-md-left"></h1>
               <!-- <h2 class="text-grey font-weight-normal">Freelance UX/UI Designer & Video editor</h2> -->
-              <div class="mt-5">
+              <div class="mt-5 text-center text-md-left">
                 <a href="javascript:;" class="btn btn-creative btn-pill w-lg-30 mr-2 conf_id" data-toggle="modal"
                   data-target=".exampleModal">
                   <i class="fas fa-video mr-1"></i>
@@ -352,7 +359,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mt-7 mt-md-0 text-center text-md-left">
               <div class="profile-img-sec">
                 <img id="profile_picture" src="" class="img-fluid img-rounded profile-img">
                 <img src="assets/img/mong/bg-dotted-sq.png" class="shape1">
@@ -579,7 +586,7 @@
   <!-- ========== FOOTER ========== -->
   <footer class="bg_darkgrey">
     <div class="container">
-      <div class="row py-4">
+      <div class="row py-4 text-center text-md-left">
 
         <div class="col-12 col-md-3 col-lg-2 my-4">
 
@@ -601,11 +608,10 @@
           </ul>
         </div>
         <!-- Logo -->
-        <div class="col-12 col-md-6 col-lg-8 mt-4 text-left text-md-right">
+        <div class="col-12 col-md-6 col-lg-8 mt-4 text-center text-md-right">
           <a class="navbar-brand" href="index.html" aria-label="Front">
             <img src="assets/img/mong/creatorin_logo_white.png" class="w-75" alt="Logo">
-            <p class="text-white logo-tag mt-1 text-left text-md-right opacity"><small>Professional Network for
-                Creators</small></p>
+            <p class="text-white logo-tag mt-1 text-center text-md-right opacity"><small>Professional Network for Creators</small></p>
           </a>
         </div>
         <!-- End Logo -->
