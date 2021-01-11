@@ -40,167 +40,6 @@
   <link rel="stylesheet" href="assets/css/custom_style.css">
 
   <style>
-    main {
-      top: 70px;
-    }
-
-    a.text-red-hover.text-muted:hover {
-      color: #f57181 !important
-    }
-
-    .navbar-brand>img {
-      width: 12.9rem;
-    }
-
-    .bg-creative {
-      background: #f57181 !important
-    }
-
-    .badge-creative,
-    .btn-creative {
-      color: #fff;
-      background-color: #f57181;
-      border: 2px solid #f57181;
-    }
-
-    .btn-creative-outline {
-      background-color: transparent;
-      border: 2px solid #f57181;
-      color: #f57181;
-    }
-
-    .btn-creative-outline:hover {
-      color: #f57181;
-    }
-
-    .btn-creative:hover {
-      color: #fff;
-    }
-
-    .navbar-nav-item:hover .nav-link,
-    .navbar-nav-item:focus .nav-link {
-      color: #f57181;
-    }
-
-    .bg_darkgrey {
-      background: #7d7d7d !important;
-    }
-
-    footer .btn-soft-light:hover,
-    footer .btn-soft-light:focus,
-    footer .btn-soft-light:active,
-    footer .btn-soft-light.active {
-      color: #f57181;
-    }
-
-    .feature_active {
-      background-color: #FFF7CC;
-    }
-
-    .logo-tag {
-      color: #677788;
-      font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    .profile-img {
-      position: relative;
-    }
-
-    .img-rounded {
-      border-radius: 50% !important;
-    }
-
-    .bg-light-grey {
-      background: #F2F4F9 !important;
-    }
-
-    .badge-creative,
-    .btn-creative {
-      color: #fff;
-      background-color: #f57181;
-    }
-
-    .btn-creative:hover {
-      color: #fff;
-    }
-
-    .color-creative {
-      color: #f57181 !important
-    }
-
-    .creative-pills.nav-segment .nav-link.active {
-      color: #ffffff;
-      background-color: #f57181;
-      box-shadow: 0px 3px 6px 0px rgba(140, 152, 164, 0.25);
-    }
-
-    .creative-pills.nav-segment {
-      background: #FFF;
-      padding: 20px;
-      margin-top: -46px;
-      box-shadow: 0px 0px 30px #ccc;
-    }
-
-    .creative-pills.nav .nav-link:not(.active):hover {
-      color: #f57181;
-    }
-
-    .creative-pills.nav-segment .nav-link {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px;
-    }
-
-    .creative-pills li.nav-item {
-      margin-right: 30px;
-    }
-
-    .text-grey {
-      color: #939BC1;
-    }
-
-    .progress-bar {
-      background-color: #f57181;
-    }
-
-    .profile-img-sec {
-      position: relative;
-    }
-
-    .profile-img {
-      z-index: 5;
-      position: relative;
-    }
-
-    .shape1 {
-      position: absolute;
-      left: -90px;
-      bottom: -60px;
-    }
-
-    .shape2 {
-      position: absolute;
-      right: -40px;
-      top: -52px;
-    }
-
-    .modal-open .modal {
-      background: #000000a3;
-    }
-
-    .schedule_modal_height {
-      height: 556px;
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px) {
-      .creative-pills li.nav-item {
-        margin-right: 30px !important;
-        text-align: center;
-        margin-left: 30px;
-      }
-    }
   </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -219,11 +58,11 @@
   <!--JQUERY ACTIVATION WHICH AVOIDS $ NOT DEFINED ERROR  -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <!-- PROFILE DATA PULLING JS -->
-  <script type="text/javascript" src="assets/js/profile.js"></script>
+  <script type="text/javascript" src="assets/js/ui-uxdesign-jobs.js"></script>
 
 </head>
 
-<body id="body-bg">
+<body>
   <!-- ========== HEADER ========== -->
   <header id="header"
     class="header header-box-shadow-on-scroll border-bottom header-abs-top header-bg-white header-show-hide"
@@ -271,7 +110,6 @@
               <ul class="navbar-nav">
 
 
-
                 <!-- Categories -->
                 <li class="hs-has-sub-menu navbar-nav-item">
                   <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;"
@@ -285,7 +123,6 @@
                     <a class="dropdown-item" href="graphicdesign-jobs.html">Graphic Design</a>
                     <!-- <a class="dropdown-item" href="ui-uxdesign-jobs.html">UI/UX Design</a> -->
                     <a class="dropdown-item" href="other-jobs.html">All Others</a>
-
                   </div>
                   <!-- End Submenu -->
                 </li>
@@ -329,7 +166,6 @@
               </ul>
             </div>
           </div>
-          <!-- End Navigation -->
         </nav>
         <!-- End Nav -->
       </div>
@@ -339,252 +175,45 @@
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main">
-    <div id="profile_section" class="hide">
-      <!-- Hero Section 1 -->
-      <div class="bg-light-grey">
-        <div class="container space-top-3 space-bottom-4">
-          <div class="row align-items-center">
-            <div class="col-md-9">
-              <h2 class="mb-0 text-center text-md-left"><span> Hello, I'm </span> <span id="profile_name"></span></h2>
-              <h1 id="profile_label" class="display-3 text-center text-md-left"></h1>
-              <!-- <h2 class="text-grey font-weight-normal">Freelance UX/UI Designer & Video editor</h2> -->
-              <div class="mt-5 text-center text-md-left">
-                <a href="javascript:;" class="btn btn-creative btn-pill w-lg-30 mr-2 conf_id" data-toggle="modal"
-                  data-target=".exampleModal">
-                  <i class="fas fa-video mr-1"></i>
-                  Connect
-                </a>
-                <a href="javascript:;" class="btn btn-creative-outline btn-pill w-lg-30 schedule_id" data-toggle="modal"
-                  data-target=".bd-example-modal-sm-schedule">
-                  <i class="fas fa-calendar-alt mr-1"></i>
-                  Schedule meeting
-                </a>
-              </div>
-            </div>
-            <div class="col-md-3 mt-7 mt-md-0 text-center text-md-left">
-              <div class="profile-img-sec">
-                <img id="profile_picture" src="" class="img-fluid img-rounded profile-img">
-                <img src="assets/img/mong/bg-dotted-sq.png" class="shape1">
-                <img src="assets/img/mong/bg-circle-shapes.png" class="shape2">
-
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-      <!-- End Hero Section 1 -->
-
-      <!-- Nav -->
+  <main id="content" role="main"
+    style="min-height: 100vh; background-image: url('../assets/img/mong/growth_doodle.png'); background-repeat: repeat;">
+    <div class="mt-10 bg-white space-2 shadow-sm">
       <div class="container">
-
-        <div class="row">
-          <div class="col-12 justify-content-center d-flex">
-
-            <ul class="creative-pills nav nav-segment nav-pills scrollbar-horizontal mb-7" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="pills-one-code-features-example2-tab" data-toggle="pill"
-                  href="#pills-one-code-features-example2" role="tab" aria-controls="pills-one-code-features-example2"
-                  aria-selected="true">About me</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" id="pills-two-code-features-example2-tab" data-toggle="pill"
-                  href="#pills-two-code-features-example2" role="tab" aria-controls="pills-two-code-features-example2"
-                  aria-selected="false">Portfolio</a>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link" id="pills-three-code-features-example2-tab" data-toggle="pill"
-                  href="#pills-three-code-features-example2" role="tab"
-                  aria-controls="pills-three-code-features-example2" aria-selected="false">Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="pills-four-code-features-example2-tab" data-toggle="pill"
-                  href="#pills-four-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2"
-                  aria-selected="false">Education</a>
-              </li>
-              <li class="nav-item mr-0">
-                <a class="nav-link" id="pills-five-code-features-example2-tab" data-toggle="pill"
-                  href="#pills-five-code-features-example2" role="tab" aria-controls="pills-five-code-features-example2"
-                  aria-selected="false">Skills</a>
-              </li>
-            </ul>
-
+        <div class="row align-items-center">
+          <div class="col-md-8 text-center text-md-left">
+            <h1 class="display-3">UI/UX Design Jobs</h1>
+            <p class="lead">Best UI/UX design jobs from leading companies</p>
+            <!-- Subscribe Form -->
+            <form method="POST" action="https://formspree.io/f/mgeprkll" class="mt-6 w-md-60">
+              <label class="sr-only">Email address</label>
+              <div class="input-group">
+                <input type="hidden" name="creatorin subscription from webdesign category">
+                <input type="email" class="form-control p-2 px-2 h-25" name="Email" placeholder="Email address"
+                  aria-label="Email address" aria-describedby="subscribeButton" required>
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-creative p-1 px-3" id="subscribeButton">Subscribe</button>
+                </div>
+              </div>
+            </form>
+            <!-- End Subscribe Form -->
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/mong/ui-ux-design.svg" class="">
           </div>
         </div>
 
       </div>
-
-      <!-- End Nav -->
-
-
-      <!-- Tab Content -->
-      <div class="tab-content space-bottom-3 position-relative">
-
-        <div class="tab-pane fade show active" id="pills-one-code-features-example2" role="tabpanel"
-          aria-labelledby="pills-one-code-features-example2-tab">
-          <div class="container pt-3 pb-2">
-            <div class="row">
-              <div class="col-12 col-md-4 col-lg-4">
-                <h3 class="color-creative mb-1">My intro</h3>
-                <h5 class="h2">About me</h5>
-              </div>
-              <div class="col-12 col-md-8 col-lg-8">
-                <!-- ABOUT ME BIO SECTION -->
-                <div id="bio_div" class="hide">
-                  <p id="profile_bio_summary_data">
-                  </p>
-                </div>
-
-                <ul class="nav nav-sm nav-x-0 nav-black flex-row mt-5">
-                  <li id="profile_address_div" class="nav-item mr-7 hide">
-                    <span class="media h5">
-                      <span class="fas fa-location-arrow color-creative mt-1 mr-2"></span>
-                      <span id="profile_location" class="media-body">
-
-                      </span>
-                    </span>
-                  </li>
-                  <li id="#profile_phone_div" class="nav-item mr-7">
-                    <span class="media h5">
-                      <span class="fas fa-phone-alt color-creative mt-1 mr-2"></span>
-                      <span id="profile_phone" class="media-body">
-                      </span>
-                    </span>
-                  </li>
-                  <li id="profile_email_div" class="nav-item ">
-                    <span class="media h5">
-                      <span class="fas fa-envelope color-creative mt-1 mr-2"></span>
-                      <span id="profile_email" class="media-body">
-                      </span>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-two-code-features-example2" role="tabpanel"
-          aria-labelledby="pills-two-code-features-example2-tab">
-          <div class="container pt-3">
-            <div class="row">
-              <div class="col-md-4">
-                <a href="javascript:;">
-                  <img src="assets/img/900x450/img1.jpg" class="img-fluid">
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="javascript:;">
-                  <img src="assets/img/900x450/img2.jpg" class="img-fluid">
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="javascript:;">
-                  <img src="assets/img/900x450/img3.jpg" class="img-fluid">
-                </a>
-              </div>
-              <div class="col-md-4 mt-3">
-                <a href="javascript:;">
-                  <img src="assets/img/900x450/img4.jpg" class="img-fluid">
-                </a>
-              </div>
-              <div class="col-md-4 mt-3">
-                <a href="javascript:;">
-                  <img src="assets/img/900x450/img5.jpg" class="img-fluid">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-three-code-features-example2" role="tabpanel"
-          aria-labelledby="pills-three-code-features-example2-tab">
-          <div class="container pt-3 pb-2">
-            <div class="row">
-              <div class="col-12 col-md-4 col-lg-4">
-                <h3 class="color-creative">Work</h3>
-                <h5 class="h2 heading-strip">My Experience</h5>
-              </div>
-              <div id="work_container" class="col-12 col-md-8 col-lg-8">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-four-code-features-example2" role="tabpanel"
-          aria-labelledby="pills-four-code-features-example2-tab">
-          <div class="container pt-3 pb-2">
-            <div class="row">
-              <div class="col-12 col-md-4 col-lg-4">
-                <h3 class="color-creative">Qualification</h3>
-                <h5 class="h2 heading-strip">My Education</h5>
-              </div>
-              <div id="edu_container" class="col-12 col-md-8 col-lg-8">
-                <div>
-                  <h3>M.S. Human Centered Design & Engineering</h3>
-                  <h4 class="text-black-50">University of Washington, Seattle, WA.</h4>
-                  <h5 class="text-black-50">June 2009 - April 2011</h5>
-                </div>
-
-                <div class="mt-6">
-                  <h3>B.S. Industrial Design</h3>
-                  <h4 class="text-black-50">KAIST, Alpharetta Georgia 30009.</h4>
-                  <h5 class="text-black-50">June 2006 - April 2009</h5>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="pills-five-code-features-example2" role="tabpanel"
-          aria-labelledby="pills-five-code-features-example2-tab">
-          <div class="container pt-3 pb-2">
-            <div class="row">
-              <div class="col-12 col-md-4 col-lg-4">
-                <h3 class="color-creative">Expertise</h3>
-                <h5 class="h2 heading-strip">My Skills</h5>
-              </div>
-              <div id="skills_container" class="col-12 col-md-8 col-lg-8">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Tab Content -->
     </div>
+    <div class="mt-2">
+      <div class="container space-1">
+        <div id="recent_job_list" class="row justify-content-lg-between align-items-lg-center">
 
-    <!-- No Page Section -->
-    <div id="no_page_found_section" class="hide">
-      <div class="container d-lg-flex align-items-lg-center min-vh-lg-100 space-4">
-        <div class="w-lg-60 w-xl-50">
-          <!-- Title -->
-          <div class="mb-4">
-            <img class="max-w-23rem mb-3" src="assets/svg/illustrations/error-number-404.svg" alt="SVG Illustration">
-            <!-- <p class="lead">Oops! Looks like you followed a bad link. <br> If you think this is a problem with us, please <a href="#">tell us.</a></p> -->
-            <!-- <h1 class="display-3 mb-3">
-                    Page not found
-                </h1> -->
-            <p class="lead">It appears the page you were looking for, couldn’t be found.</p>
-          </div>
-          <!-- End Title -->
-
-          <a class="btn btn-wide btn-creative transition-3d-hover" href="index.html">Back Home</a>
         </div>
       </div>
     </div>
-    <!-- End of No Page Section -->
-    <!-- 
-    <div class="bg-pastel-blue py-3">
-
-    </div> -->
-
 
   </main>
-
+  <!-- ========== END MAIN ========== -->
 
   <!-- ========== FOOTER ========== -->
   <footer class="bg_darkgrey">
@@ -663,56 +292,6 @@
     </div>
   </footer>
   <!-- ========== END FOOTER ========== -->
-
-
-  <!-- VIDEO CONFERENCE MODAL STARTS HERE -->
-  <div class="container">
-    <div class="modal fade bd-example-modal-sm p-0 exampleModal" tabindex="-1" role="dialog"
-      aria-labelledby="mySmallModalLabel" aria-hidden="true" style="z-index: 9999;">
-      <div class="modal-dialog modal-sm" style="min-width: 100%; min-height:99%; margin: 0;
-      padding: 5px !important;">
-        <div class="modal-content rounded-0"
-          style="overflow: hidden; border: 5px solid #d4d4d4; background-clip: border-box;">
-          <div class="position-absolute" style="right: 10px; top:10px;">
-            <button type="button small"
-              style="background-color: #f57181; width:30px; height: 30px;  opacity: 1; border-radius: 5px;"
-              class="close" data-dismiss="modal" aria-label="Close">
-              <span class="text-white" aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <iframe id="profile_conf" src="" style="width:100%; height: -webkit-fill-available; border:none;"
-            allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
-            allow="geolocation; microphone *; camera *"
-            sandbox="allow-forms allow-scripts allow-modals allow-same-origin allow-popups" height="100%"
-            width="100%"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- VIDEO CONFERENCE MODAL ENDS HERE -->
-
-  <!-- SCHEDULING MODAL STARTS HERE -->
-  <div class="container">
-    <div class="schedulemodel modal fade bd-example-modal-sm-schedule text-center" tabindex="-1" role="dialog"
-      aria-labelledby="mySmallModalLabel" aria-hidden="true" style="z-index: 9999; overflow:hidden;">
-      <div class="modal-dialog modal-dialog-centered modal-sm"
-        style="min-width: 60%; min-height:30%; padding: 5px !important; ">
-        <div class="modal-content rounded-0 schedule_modal_height"
-          style="overflow: visible;  background-clip: border-box;">
-          <div class="position-absolute" style="right: 0px; top:-32px;">
-            <button type="button small"
-              style="background-color: #f57181; width:50px; height: 25px; font-size:14px; opacity: 1; border-radius: 2px;"
-              class="close" data-dismiss="modal" aria-label="Close">
-              <span class="text-white font-weight-lighter" aria-hidden="true"> Close</span>
-            </button>
-          </div>
-          <iframe id="profile_schedule" src=""
-            style="width:100%; height: -webkit-fill-available; border:none;"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- SCHEDULING MODAL ENDS HERE -->
 
   <!-- JS Global Compulsory -->
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>

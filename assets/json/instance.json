@@ -4,6 +4,8 @@
     "featured_jobs_url":"https://jobs.app.creatorin.com/api/jobs",
     "webdesign_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Web%20Design",
     "productdesign_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Product%20Design",
+    "graphicdesign_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Graphic%20Design",
+    "ui_ux_design_jobs_url":"",
     "others_jobs_url":"https://jobs.app.creatorin.com/api/jobs/Others",
     "instance_url": "https://app.creatorin.com"
 }

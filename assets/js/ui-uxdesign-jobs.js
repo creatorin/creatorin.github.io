@@ -4,7 +4,7 @@
 
 // // GET URL FROM LOCAL JSON FILE
 var instancedata = $.getJSON("../../assets/json/instance.json", function (datas) {
-var jobs_url = datas.webdesign_jobs_url;
+var jobs_url = datas.ui_ux_design_jobs_url;
  
 // Get url from current url params
 // var url = window.location.pathname;
