@@ -12,10 +12,10 @@ var urlprofile = url.substring(url.lastIndexOf('/') + 1);
 
 // SPLIT HTML FROM NAME
 // var urlprofilename = urlprofile.split('.')[0];
-var urlprofilename = urlprofile;
+// var urlprofilename = urlprofile;
 
 // UNCOMMENT THIS LINE AND COMMENT ABOVE LINE TO WORK LOCALLY 
-// var urlprofilename="stevesmith";
+var urlprofilename="senthamil";
 
 
 // Remove this code when URL is working without CORS ERROR
@@ -282,9 +282,66 @@ console.log(getprofileurl);
               $('#profile_address_div').removeClass("hide");
             $('#profile_location').html(profileaddress +  "<br/>" + profilecity +  " " + profilepostalcode );
           }
-
         
-          }
+           var portfolio_url = instance+ "/api/v1/profile.files/"+ urlprofilename;
+           console.log(portfolio_url);
+           $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": portfolio_url,
+            "cors": true ,
+            "method": "GET",
+            "headers": {
+              // 'Access-Control-Allow-Origin': '*',
+              // 'Content-Type':'application/json',
+              },
+  
+            success:function (myResult) {
+             console.log(myResult);
+             var extra_img_loop = '';
+              for (var o in myResult.files) {
+                var image_url = myResult.files[o].url;
+                console.log(image_url +"---"+ o);
+                if(o == 0){
+                  console.log("first data");
+                  $('#gallery_id').removeClass("v-hidden");
+                  $('#at-image-1').attr('data-src', image_url);
+                  $('#it-image-1').attr('src', image_url);  
+                }
+
+                if(o == 1){
+                  console.log("Second data");
+                  $('#second-col').removeClass("v-hidden");
+                  $('#at-image-2').attr('data-src', image_url);
+                  $('#it-image-2').attr('src', image_url);  
+                } 
+
+                if(o == 2){
+                  console.log("Third data");
+                  $('#at-image-3').removeClass("v-hidden");
+                  $('#at-image-3').attr('data-src', image_url);
+                  $('#it-image-3').attr('src', image_url);  
+                }
+                if(o>2) {
+                 var extra_img = `<img class="js-fancybox-item d-none" alt="Image Description"
+                  data-src="${image_url}" data-caption="Image #${o}">
+                  `;
+
+                  extra_img_loop += extra_img;
+                }
+              }
+              if(myResult.files.length() > 2){
+                $('#at-image-3').append(extra_img_loop);
+              }
+            },
+            error: function(xhr, status, error) {
+              
+              $('#no_image_id').removeClass("v-hidden");
+            }
+          });
+        }
+        
+          
         },
           error: function(xhr, status, error) {
             // var err = eval("(" + xhr.responseText + ")");

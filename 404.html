@@ -195,6 +195,9 @@
       margin-top: 60px;
     }
 
+    .v-hidden {
+      visibility: hidden;
+    }
     @media only screen and (max-width: 767px) {
       .creative-pills li.nav-item {
         margin-right: 30px !important;
@@ -472,70 +475,60 @@
           <div class="container pt-3">
             <div class="row">
               <div class="col-md-12">
-                 <!-- Gallery Section -->
-<div class="container position-relative">
-  <div id="fancyboxGallery" class="js-fancybox"
-       data-hs-fancybox-options='{
+                <p id="no_image_id" class="text-center v-hidden">No Images Found</p>
+                <!-- Gallery Section -->
+                <div id="gallery_id" class="container position-relative v-hidden">
+                 
+                  <div id="fancyboxGallery" class="js-fancybox " data-hs-fancybox-options='{
          "selector": "#fancyboxGallery .js-fancybox-item"
        }'>
-    <div class="rounded-lg overflow-hidden">
-      <div class="row mx-n1">
-        <div class="col-md-8 px-1">
-          <!-- Gallery -->
-          <a class="js-fancybox-item d-block" href="javascript:;"
-              data-src="assets/img/1920x1080/img27.jpg"
-              data-caption="Image #01">
-            <img class="img-fluid w-100" src="assets/img/900x455/img1.jpg" alt="Image Description">
+                    <div class="rounded-lg overflow-hidden">
+                      <div class="row mx-n1">
+                        <div class="col-md-8 px-1">
+                          <!-- Gallery -->
+                          <a id="at-image-1" class="js-fancybox-item d-block" href="javascript:;"
+                            data-src="assets/img/1920x1080/img27.jpg" data-caption="Image #01">
+                            <img id="it-image-1" class="img-fluid w-100" src="assets/img/900x455/img1.jpg" alt="Image Description">
+                          </a>
+                          <!-- End Gallery -->
+                        </div>
 
-            <!-- <div class="position-absolute bottom-0 right-0 pb-3 pr-3">
-              <span class="d-md-none btn btn-sm btn-light">
-                <i class="fas fa-expand mr-2"></i> View Photos
-              </span>
-            </div> -->
-          </a>
-          <!-- End Gallery -->
-        </div>
+                        <div id="second-col" class="col-md-4 d-md-inline-block px-1 mt-2 mt-md-0 v-hidden">
+                          <!-- Gallery -->
+                          <a id="at-image-2" class="js-fancybox-item d-block mb-2" href="javascript:;"
+                            data-src="assets/img/1920x1080/img11.jpg" data-caption="Image #02">
+                            <img id="it-image-2" class="img-fluid w-100" src="assets/img/450x225/img1.jpg" alt="Image Description">
+                          </a>
+                          <!-- End Gallery -->
 
-        <div class="col-md-4 d-md-inline-block px-1 mt-2 mt-md-0">
-          <!-- Gallery -->
-          <a class="js-fancybox-item d-block mb-2" href="javascript:;"
-              data-src="assets/img/1920x1080/img11.jpg"
-              data-caption="Image #02">
-            <img class="img-fluid w-100" src="assets/img/450x225/img1.jpg" alt="Image Description">
-          </a>
-          <!-- End Gallery -->
+                          <!-- Gallery -->
+                          <a id="at-image-3" class="js-fancybox-item d-block v-hidden" href="javascript:;"
+                            data-src="assets/img/1920x1080/img14.jpg" data-caption="Image #03">
+                            <img id="it-image-3" class="img-fluid w-100" src="assets/img/450x225/img2.jpg" alt="Image Description">
 
-          <!-- Gallery -->
-          <a class="js-fancybox-item d-block" href="javascript:;"
-              data-src="assets/img/1920x1080/img14.jpg"
-              data-caption="Image #03">
-            <img class="img-fluid w-100" src="assets/img/450x225/img2.jpg" alt="Image Description">
+                            <div class="position-absolute bottom-0 right-0 pb-3 pr-3">
+                              <span class="d-md-inline-block btn btn-sm btn-light">
+                                <i class="fas fa-expand mr-2"></i> View Photos
+                              </span>
+                            </div>
+                          </a>
+                          <!-- End Gallery -->
 
-            <div class="position-absolute bottom-0 right-0 pb-3 pr-3">
-              <span class="d-md-inline-block btn btn-sm btn-light">
-                <i class="fas fa-expand mr-2"></i> View Photos
-              </span>
-            </div>
-          </a>
-          <!-- End Gallery -->
+                          <img class="js-fancybox-item d-none" alt="Image Description"
+                            data-src="assets/img/1920x1080/img24.jpg" data-caption="Image #04">
+                          <img class="js-fancybox-item d-none" alt="Image Description"
+                            data-src="assets/img/1920x1080/img20.jpg" data-caption="Image #05">
+                        </div>
+                      </div>
+                      <!-- End Row -->
 
-          <img class="js-fancybox-item d-none" alt="Image Description"
-                data-src="assets/img/1920x1080/img24.jpg"
-                data-caption="Image #04">
-          <img class="js-fancybox-item d-none" alt="Image Description"
-                data-src="assets/img/1920x1080/img20.jpg"
-                data-caption="Image #05">
-        </div>
-      </div>
-      <!-- End Row -->
 
-      
-    </div>
+                    </div>
 
-    
-  </div>
-</div>
-<!-- End Gallery Section -->
+
+                  </div>
+                </div>
+                <!-- End Gallery Section -->
               </div>
             </div>
           </div>
@@ -768,7 +761,8 @@
   <script src="assets/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
   <script src="assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
   <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
-  <script src="assets/vendor/hs-scroll-to-in-overflowed-container/dist/hs-scroll-to-in-overflowed-container.min.js"></script>
+  <script src="assets/vendor/hs-scroll-to-in-overflowed-container/dist/hs-scroll-to-in-overflowed-container.min.js">
+  </script>
   <script src="../documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
   <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
   <script src="../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
@@ -805,7 +799,7 @@
       });
 
       // initialization of slick carousel
-      $('.js-slick-carousel').each(function() {
+      $('.js-slick-carousel').each(function () {
         var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
       });
 
