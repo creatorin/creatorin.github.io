@@ -12,10 +12,10 @@ var urlprofile = url.substring(url.lastIndexOf('/') + 1);
 
 // SPLIT HTML FROM NAME
 // var urlprofilename = urlprofile.split('.')[0];
-// var urlprofilename = urlprofile;
+var urlprofilename = urlprofile;
 
 // UNCOMMENT THIS LINE AND COMMENT ABOVE LINE TO WORK LOCALLY 
-var urlprofilename="senthamil";
+// var urlprofilename="senthamil";
 
 
 // Remove this code when URL is working without CORS ERROR
@@ -301,7 +301,6 @@ console.log(getprofileurl);
              var extra_img_loop = '';
               for (var o in myResult.files) {
                 var image_url = myResult.files[o].url;
-                console.log(image_url +"---"+ o);
                 if(o == 0){
                   console.log("first data");
                   $('#gallery_id').removeClass("v-hidden");
