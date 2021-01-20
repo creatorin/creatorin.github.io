@@ -15,7 +15,7 @@ var urlprofile = url.substring(url.lastIndexOf('/') + 1);
 var urlprofilename = urlprofile;
 
 // UNCOMMENT THIS LINE AND COMMENT ABOVE LINE TO WORK LOCALLY 
-// var urlprofilename="senthamil";
+// var urlprofilename="stevesmith";
 
 
 // Remove this code when URL is working without CORS ERROR
@@ -302,26 +302,23 @@ console.log(getprofileurl);
               for (var o in myResult.files) {
                 var image_url = myResult.files[o].url;
                 if(o == 0){
-                  console.log("first data");
                   $('#gallery_id').removeClass("v-hidden");
                   $('#at-image-1').attr('data-src', image_url);
                   $('#it-image-1').attr('src', image_url);  
                 }
 
                 if(o == 1){
-                  console.log("Second data");
                   $('#second-col').removeClass("v-hidden");
                   $('#at-image-2').attr('data-src', image_url);
                   $('#it-image-2').attr('src', image_url);  
                 } 
 
                 if(o == 2){
-                  console.log("Third data");
                   $('#at-image-3').removeClass("v-hidden");
                   $('#at-image-3').attr('data-src', image_url);
                   $('#it-image-3').attr('src', image_url);  
                 }
-                if(o>2) {
+                if(o > 2) {
                  var extra_img = `<img class="js-fancybox-item d-none" alt="Image Description"
                   data-src="${image_url}" data-caption="Image #${o}">
                   `;
@@ -329,8 +326,13 @@ console.log(getprofileurl);
                   extra_img_loop += extra_img;
                 }
               }
-              if(myResult.files.length() > 2){
+              if(myResult.count > 2){
+                console.log(myResult.count);
+                console.log(extra_img_loop);
                 $('#at-image-3').append(extra_img_loop);
+              }
+              else if(myResult.count == 0){
+                $('#no_image_id').removeClass("v-hidden");
               }
             },
             error: function(xhr, status, error) {
